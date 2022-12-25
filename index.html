@@ -5,13 +5,35 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link href="src/css/bootstrap.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400..700"
+    />
   </head>
   <body>
-    <div id="app"></div>
-    <div class="example">
-      <div class="example__child">Child_1</div>
-      <div class="example__child">Child_2</div>
-    </div>
-    <script type="module" src="/main.js"></script>
+    <section class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 order-md-2">
+            <div class="hero__image">
+              <img src="src/images/hero/Image.svg" alt="Contact us" />
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 order-md-1">
+            <div class="hero__text">
+              <h3>We Are The Best <span>Digital Agency</span> for business</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+              <button type="button">Contact Us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="/src/js/bootstrap.bundle.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,19 @@
+$font-family: 'Work Sans', sans-serif;
+
+* {
+  font-family: $font-family;
+}
+
+.container {
+  padding: 0 20px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    max-width: 688px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 992px) {
+    max-width: 1170px;
+  }
+}
