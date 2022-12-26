@@ -1,0 +1,170 @@
+@use 'typography';
+@use 'colors';
+@use 'mixins';
+@use 'buttons';
+
+.hero {
+  position: relative;
+  background-color: colors.$orange-background;
+  padding: 50px 0;
+
+  @include mixins.media-sm {
+    padding: 73px 0;
+  }
+
+  @include mixins.media-lg {
+    padding: 153px 0;
+  }
+
+  &__inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 400px;
+    margin: 0 auto;
+
+    @include mixins.media-sm {
+      flex-direction: row;
+      gap: 19px;
+      max-width: auto;
+      margin: 0;
+    }
+
+    @include mixins.media-lg {
+      gap: 35px;
+    }
+  }
+
+  &__image-column {
+    flex: 0 0 100%;
+
+    @include mixins.media-sm {
+      flex-basis: 307px;
+      order: 2;
+      margin-top: 16px;
+    }
+
+    @include mixins.media-lg {
+      flex-basis: 639px;
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__text-column {
+    flex: 0 0 100%;
+
+    @include mixins.media-sm {
+      flex-basis: 349px;
+      order: 1;
+    }
+
+    @include mixins.media-lg {
+      flex-basis: 493px;
+      margin-top: 23px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include mixins.media-sm {
+      text-align: left;
+    }
+
+    h3 {
+      @extend %h3;
+
+      span {
+        color: colors.$orange;
+      }
+    }
+
+    p {
+      @extend %p;
+
+      margin: 18px 0 0;
+
+      @include mixins.media-lg {
+        margin: 25px 0 0;
+      }
+
+      .desktop-visible-text {
+        display: none;
+
+        @include mixins.media-lg {
+          display: inline;
+        }
+      }
+    }
+
+    button {
+      @extend %button;
+
+      margin: 25px 0 0;
+
+      @include mixins.media-lg {
+        margin: 50px 0 0;
+      }
+    }
+  }
+
+  &__social-links {
+    position: absolute;
+    display: none;
+
+    @include mixins.media-sm {
+      display: block;
+      right: 0;
+      top: 59px;
+    }
+
+    @include mixins.media-lg {
+      top: 217px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      li {
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        background-color: colors.$white;
+        box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+        transition: background-color 0.2s ease-in;
+
+        &:hover {
+          background-color: colors.$orange;
+        }
+
+        a {
+          display: flex;
+          width: 40px;
+          height: 40px;
+          align-items: center;
+          justify-content: center;
+
+          svg path {
+            transition: fill 0.2s ease-in;
+          }
+        }
+
+        &:hover a svg path {
+          fill: colors.$white;
+        }
+      }
+    }
+  }
+}

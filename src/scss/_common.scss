@@ -1,0 +1,23 @@
+@use 'mixins';
+
+* {
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.common-container {
+  width: 100%;
+  margin: 0;
+  padding: 0 16.5px;
+
+  @include mixins.media-sm {
+    margin: 0 auto;
+    width: 688px;
+    padding: 0;
+  }
+
+  @include mixins.media-lg {
+    width: 1170px;
+  }
+}

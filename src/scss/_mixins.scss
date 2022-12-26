@@ -1,0 +1,19 @@
+@use 'breakpoints';
+
+@mixin media($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-sm() {
+  @media screen and (min-width: breakpoints.$sm) {
+    @content;
+  }
+}
+
+@mixin media-lg() {
+  @media screen and (min-width: breakpoints.$lg) {
+    @content;
+  }
+}

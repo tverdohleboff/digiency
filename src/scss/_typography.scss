@@ -1,0 +1,27 @@
+@use 'colors';
+@use 'mixins';
+
+%h3 {
+  font-size: 31.25px;
+  color: colors.$black;
+  line-height: 38.62px;
+  font-weight: 600;
+
+  @include mixins.media-sm {
+    font-size: 39.06px;
+    line-height: 48.28px;
+  }
+
+  @include mixins.media-lg {
+    font-size: 48px;
+    line-height: 59.33px;
+    font-weight: 700;
+  }
+}
+
+%p {
+  color: colors.$gray-paragraph;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
