@@ -21,3 +21,11 @@
     width: 1170px;
   }
 }
+
+.desktop-visible-text {
+  display: none;
+
+  @include mixins.media-lg {
+    display: inline;
+  }
+}

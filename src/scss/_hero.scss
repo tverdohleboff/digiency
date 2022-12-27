@@ -94,14 +94,6 @@
       @include mixins.media-lg {
         margin: 25px 0 0;
       }
-
-      .desktop-visible-text {
-        display: none;
-
-        @include mixins.media-lg {
-          display: inline;
-        }
-      }
     }
 
     button {
