@@ -1,7 +1,7 @@
-@use 'colors';
 @use 'mixins';
-@use 'typography';
+@use 'colors';
 @use 'buttons';
+@use 'typography';
 
 .about-us {
   background-color: colors.$white;
@@ -43,18 +43,15 @@
     }
 
     &-title {
-      @extend %block-title;
+      @extend %title;
     }
 
     h3 {
-      @extend %h3;
+      @extend %h-main;
 
       margin: 18px 0 0;
 
       @include mixins.media-lg {
-        line-height: 48.3px;
-        font-size: 39px;
-        font-weight: 600;
         max-width: 494px;
         margin-top: 25px;
       }
@@ -65,7 +62,7 @@
     }
 
     p {
-      @extend %p;
+      @extend %title;
 
       margin: 18px 0 0;
     }
@@ -116,18 +113,14 @@
     }
 
     &-title {
+      @extend %h-second;
+
       text-align: center;
-      font-size: 20px;
-      line-height: 25px;
-      font-weight: 500;
       max-width: 250px;
       margin: 37px auto 18px;
 
       @include mixins.media-sm {
         max-width: unset;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 400;
         margin: 25px 0 18px;
       }
 

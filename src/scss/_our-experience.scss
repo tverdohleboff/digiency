@@ -1,0 +1,154 @@
+@use 'mixins';
+@use 'colors';
+@use 'buttons';
+@use 'typography';
+
+.our-experience {
+  padding: 50px 0;
+  background-color: colors.$orange-background;
+
+  @include mixins.media-sm {
+    padding: 60px 0;
+  }
+
+  &__inner-container {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.media-sm {
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include mixins.media-sm {
+      text-align: left;
+      flex-basis: 332px;
+    }
+
+    @include mixins.media-lg {
+      margin-top: 23px;
+      flex-basis: 570px;
+    }
+
+    &-title {
+      @extend %title;
+    }
+
+    h3 {
+      @extend %h-main;
+
+      padding: 0 36px;
+      margin-top: 18px;
+
+      @include mixins.media-sm {
+        padding: 0;
+      }
+
+      @include mixins.media-lg {
+        margin-top: 25px;
+        flex-basis: 487px;
+      }
+
+      span {
+        color: colors.$orange;
+      }
+    }
+
+    p {
+      @extend %title;
+
+      margin: 18px 0 0;
+    }
+
+    p + p {
+      margin-top: 24px;
+    }
+
+    button {
+      @extend %button;
+
+      margin: 25px 0 0;
+
+      @include mixins.media-sm {
+        margin: 32px 0 0;
+      }
+
+      @include mixins.media-lg {
+        margin: 50px 0 0;
+      }
+    }
+  }
+
+  &__papers {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 50px;
+
+    @include mixins.media-sm {
+      flex-basis: 332px;
+      flex-flow: row wrap;
+      gap: 8px;
+      margin-top: 45px;
+    }
+
+    @include mixins.media-lg {
+      margin-top: 0;
+      flex-basis: 570px;
+      flex-flow: row wrap;
+      gap: 30px;
+    }
+  }
+
+  &__paper {
+    width: 100%;
+    height: 250px;
+    flex: 0 0 auto;
+    box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+    background-color: colors.$white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+
+    @include mixins.media-sm {
+      flex-basis: 162px;
+      height: 150px;
+
+      &.paper-2 {
+        margin-top: 32px;
+      }
+
+      &.paper-3 {
+        margin-top: -32px;
+      }
+    }
+
+    @include mixins.media-lg {
+      flex-basis: 270px;
+      height: 250px;
+
+      &.paper-2 {
+        margin-top: 23px;
+      }
+
+      &.paper-3 {
+        margin-top: -23px;
+      }
+    }
+
+    &-number {
+      @extend %h-paper-number;
+    }
+  }
+
+  &-name {
+    @extend %h-paper-name;
+  }
+}

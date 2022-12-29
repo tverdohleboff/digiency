@@ -1,7 +1,7 @@
-@use 'typography';
-@use 'colors';
 @use 'mixins';
+@use 'colors';
 @use 'buttons';
+@use 'typography';
 
 .hero {
   position: relative;
@@ -28,6 +28,7 @@
       gap: 19px;
       max-width: auto;
       margin: 0;
+      align-items: flex-start;
     }
 
     @include mixins.media-lg {
@@ -79,7 +80,7 @@
     }
 
     h3 {
-      @extend %h3;
+      @extend %h-first;
 
       span {
         color: colors.$orange;
@@ -87,7 +88,7 @@
     }
 
     p {
-      @extend %p;
+      @extend %title;
 
       margin: 18px 0 0;
 
