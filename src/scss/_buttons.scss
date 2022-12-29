@@ -2,7 +2,7 @@
 @use 'typography';
 
 %button {
-  @extend %h5;
+  @extend %button;
 
   padding: 12px 20px;
   border: 0;
