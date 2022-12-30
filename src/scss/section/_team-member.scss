@@ -1,0 +1,174 @@
+@use '../mixins';
+@use '../colors';
+@use '../buttons';
+@use '../typography';
+
+.team-member {
+  padding: 50px 0 35px; // добавлена корректировка (снизу) в 15px для отображения тени
+  background-color: colors.$white;
+  text-align: center;
+
+  @include mixins.media-sm {
+    padding: 120px 0 105px; // добавлена корректировка (снизу) в 15px для отображения тени
+  }
+
+  &__inner-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__text-block-container {
+    &-title {
+      @extend %title;
+    }
+  }
+
+  h3 {
+    @extend %h-main;
+
+    margin-top: 18px;
+    padding: 0 63px;
+
+    @include mixins.media-sm {
+      margin-top: 18px;
+    }
+    @include mixins.media-lg {
+      margin-top: 25px;
+    }
+
+    span {
+      color: colors.$orange;
+    }
+  }
+
+  &__profiles-block {
+    margin-top: 18px;
+    display: flex;
+    overflow-x: scroll;
+    gap: 15px; // пропадает тень из-за overflow
+    height: 365px; // добавлена высота в 15px для отображения тени (иначе нет снизу)
+    padding: 0 5px; // добавлен отступ (иначе нет слева)
+
+    @include mixins.media-sm {
+      gap: 20px; // уменьшен на 4px для отображения тени (иначе нет справа)
+      margin-top: 60px;
+    }
+    @include mixins.media-lg {
+      gap: 30px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__profile {
+    width: 270px;
+    height: 350px;
+    box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+    background-color: colors.$white;
+
+    @include mixins.media-sm {
+      width: 213px;
+      height: 334px;
+    }
+
+    @include mixins.media-lg {
+      width: 270px;
+      height: 350px;
+    }
+
+    &:hover social-links {
+      display: block;
+    }
+
+    &-card {
+      position: relative;
+
+      &-social-links {
+        position: absolute;
+        display: block;
+        right: 0;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          li {
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+            background-color: colors.$white;
+            box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+            transition: background-color 0.2s ease-in;
+
+            &:hover {
+              box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+            }
+
+            &:active {
+              background-color: colors.$orange;
+            }
+
+            a {
+              display: flex;
+              width: 40px;
+              height: 40px;
+              align-items: center;
+              justify-content: center;
+
+              svg path {
+                transition: fill 0.2s ease-in;
+              }
+            }
+
+            &:active a svg path {
+              fill: colors.$white;
+            }
+          }
+        }
+      }
+
+      &-photo {
+        @include mixins.media-sm {
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+        }
+
+        &-img {
+          @include mixins.media-sm {
+            max-height: 230px;
+          }
+
+          @include mixins.media-lg {
+            max-height: 100%;
+          }
+        }
+      }
+    }
+
+    &-name {
+      @extend %h5;
+
+      margin-top: 24px;
+
+      @include mixins.media-sm {
+        margin-top: 25px;
+      }
+      @include mixins.media-lg {
+        margin-top: 24px;
+      }
+    }
+
+    &-job {
+      @extend %title;
+
+      margin-top: 12px;
+    }
+  }
+}

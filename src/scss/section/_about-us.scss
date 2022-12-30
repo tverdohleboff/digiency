@@ -1,7 +1,7 @@
-@use 'mixins';
-@use 'colors';
-@use 'buttons';
-@use 'typography';
+@use '../mixins';
+@use '../colors';
+@use '../buttons';
+@use '../typography';
 
 .about-us {
   background-color: colors.$white;
@@ -75,6 +75,10 @@
       @extend %button;
 
       margin: 25px 0 0;
+
+      &:hover {
+        box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+      }
     }
   }
 
@@ -102,6 +106,10 @@
     flex: 0 0 100%;
     background-color: colors.$white;
     box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+
+    &:hover {
+      box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+    }
 
     @include mixins.media-sm {
       flex: 1 1 auto;

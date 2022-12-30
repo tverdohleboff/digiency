@@ -1,7 +1,7 @@
-@use 'mixins';
-@use 'colors';
-@use 'buttons';
-@use 'typography';
+@use '../mixins';
+@use '../colors';
+@use '../buttons';
+@use '../typography';
 
 .hero {
   position: relative;
@@ -105,6 +105,10 @@
       @include mixins.media-lg {
         margin: 50px 0 0;
       }
+
+      &:hover {
+        box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+      }
     }
   }
 
@@ -139,6 +143,10 @@
         transition: background-color 0.2s ease-in;
 
         &:hover {
+          box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+        }
+
+        &:active {
           background-color: colors.$orange;
         }
 
@@ -154,7 +162,7 @@
           }
         }
 
-        &:hover a svg path {
+        &:active a svg path {
           fill: colors.$white;
         }
       }

@@ -1,7 +1,7 @@
-@use 'mixins';
-@use 'colors';
-@use 'buttons';
-@use 'typography';
+@use '../mixins';
+@use '../colors';
+@use '../buttons';
+@use '../typography';
 
 .our-experience {
   padding: 50px 0;
@@ -81,6 +81,10 @@
       @include mixins.media-lg {
         margin: 50px 0 0;
       }
+
+      &:hover {
+        box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+      }
     }
   }
 
@@ -116,6 +120,10 @@
     flex-direction: column;
     gap: 18px;
     align-items: center;
+
+    &:hover {
+      box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+    }
 
     @include mixins.media-sm {
       flex-basis: 162px;

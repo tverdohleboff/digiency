@@ -1,4 +1,5 @@
 @use 'common';
-@use 'hero';
-@use 'about-us';
-@use 'our-experience';
+@use './section/hero';
+@use './section/about-us';
+@use './section/our-experience';
+@use './section/team-member';
