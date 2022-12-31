@@ -81,10 +81,6 @@
 
     h3 {
       @extend %h-first;
-
-      span {
-        color: colors.$orange;
-      }
     }
 
     p {

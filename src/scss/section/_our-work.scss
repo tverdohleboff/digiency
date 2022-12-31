@@ -1,0 +1,71 @@
+@use '../mixins';
+@use '../colors';
+@use '../buttons';
+@use '../typography';
+
+.our-work {
+  padding: 0 0 50px;
+  background-color: colors.$white;
+
+  &__text-container {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+
+    &-title {
+      @extend %title;
+    }
+
+    h3 {
+      @extend %h-main;
+
+      margin-top: 18px;
+      padding: 0 50px;
+    }
+  }
+
+  &__examples-container {
+    margin-top: 25px;
+
+    &-categories {
+      @extend %title;
+
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      gap: 18px;
+      white-space: nowrap;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &-sample {
+      &-icon {
+        padding: 370px 0 0;
+        background-color: colors.$white;
+        background-image: url('../images/our-work/lastest-work.svg');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 343px 370px;
+      }
+
+      &-name {
+        @extend %h3;
+
+        // color: colors.$white;
+      }
+
+      &-category {
+        @extend %title;
+
+        // color: colors.$white;
+      }
+    }
+
+    &-samples {
+      padding-top: 50px;
+    }
+  }
+}

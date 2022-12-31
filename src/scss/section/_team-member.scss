@@ -35,10 +35,6 @@
     @include mixins.media-lg {
       margin-top: 25px;
     }
-
-    span {
-      color: colors.$orange;
-    }
   }
 
   &__profiles-block {
