@@ -36,6 +36,10 @@
       gap: 18px;
       white-space: nowrap;
 
+      span {
+        color: colors.$orange;
+      }
+
       &::-webkit-scrollbar {
         display: none;
       }

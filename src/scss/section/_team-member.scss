@@ -76,7 +76,7 @@
       overflow: hidden;
 
       &:hover li {
-        transform: translateX(0);
+        transform: rotate3d(0, 1, 0, 0);
       }
     }
 
@@ -107,7 +107,7 @@
           transition: background-color 0.2s ease-in;
 
           @include mixins.media-lg {
-            transform: translateX(40px);
+            transform: rotate3d(0, 1, 0, 90deg);
           }
 
           &:nth-child(1) {
