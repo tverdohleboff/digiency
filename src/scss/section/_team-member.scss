@@ -63,6 +63,7 @@
     height: 350px;
     box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
     background-color: colors.$white;
+    position: relative;
 
     @include mixins.media-sm {
       width: 213px;
@@ -72,78 +73,100 @@
     @include mixins.media-lg {
       width: 270px;
       height: 350px;
+      overflow: hidden;
+
+      &:hover li {
+        transform: translateX(0);
+      }
     }
 
     &:hover social-links {
       display: block;
     }
 
-    &-card {
-      position: relative;
+    &-social-links {
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 29px;
 
-      &-social-links {
-        position: absolute;
-        display: block;
-        right: 0;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
 
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
+        li {
+          flex: 0 0 40px;
+          width: 40px;
+          height: 40px;
+          background-color: colors.$white;
+          box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+          transition: background-color 0.2s ease-in;
 
-          li {
-            flex: 0 0 40px;
+          @include mixins.media-lg {
+            transform: translateX(40px);
+          }
+
+          &:nth-child(1) {
+            transition: transform 0.2s ease-in;
+          }
+
+          &:nth-child(2) {
+            transition: transform 0.2s ease-in 0.25s;
+          }
+
+          &:nth-child(3) {
+            transition: transform 0.2s ease-in 0.5s;
+          }
+
+          &:nth-child(4) {
+            transition: transform 0.2s ease-in 0.75s;
+          }
+
+          &:hover {
+            box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+          }
+
+          &:active {
+            background-color: colors.$orange;
+          }
+
+          a {
+            display: flex;
             width: 40px;
             height: 40px;
-            background-color: colors.$white;
-            box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
-            transition: background-color 0.2s ease-in;
+            align-items: center;
+            justify-content: center;
 
-            &:hover {
-              box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+            svg path {
+              transition: fill 0.2s ease-in;
             }
+          }
 
-            &:active {
-              background-color: colors.$orange;
-            }
-
-            a {
-              display: flex;
-              width: 40px;
-              height: 40px;
-              align-items: center;
-              justify-content: center;
-
-              svg path {
-                transition: fill 0.2s ease-in;
-              }
-            }
-
-            &:active a svg path {
-              fill: colors.$white;
-            }
+          &:active a svg path {
+            fill: colors.$white;
           }
         }
       }
+    }
 
-      &-photo {
+    &-photo {
+      @include mixins.media-sm {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+
+      &-img {
         @include mixins.media-sm {
-          overflow: hidden;
-          display: flex;
-          justify-content: center;
+          max-height: 230px;
         }
 
-        &-img {
-          @include mixins.media-sm {
-            max-height: 230px;
-          }
-
-          @include mixins.media-lg {
-            max-height: 100%;
-          }
+        @include mixins.media-lg {
+          max-height: 100%;
         }
       }
     }
