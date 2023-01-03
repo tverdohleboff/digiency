@@ -81,7 +81,7 @@
         justify-content: space-between;
       }
 
-      @include mixins.media-sm {
+      @include mixins.media-lg {
         gap: 29px;
         height: 910px;
       }
