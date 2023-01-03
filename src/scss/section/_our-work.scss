@@ -16,11 +16,23 @@
     max-width: 400px;
     margin: 0 auto;
 
+    @include mixins.media-lg {
+      max-width: 800px;
+    }
+
     h3 {
       @extend %h-main;
 
       margin-top: 18px;
-      padding: 0 50px;
+      padding: 0 40px;
+
+      @include mixins.media-sm {
+        padding: 0;
+      }
+
+      @include mixins.media-lg {
+        margin-top: 25px;
+      }
     }
   }
 
@@ -28,13 +40,21 @@
     margin-top: 25px;
 
     &-categories {
-      @extend %title;
+      @extend %h-category;
 
       display: flex;
       flex-direction: row;
       overflow-x: scroll;
       gap: 18px;
       white-space: nowrap;
+
+      @include mixins.media-sm {
+        justify-content: center;
+        gap: 43px;
+      }
+
+      @include mixins.media-lg {
+      }
 
       span {
         color: colors.$orange;
@@ -45,18 +65,28 @@
       }
     }
 
+    &-category:hover {
+      color: colors.$orange;
+    }
+
     &-samples {
-      padding-top: 50px;
+      margin-top: 50px;
       display: flex;
       flex-direction: column;
       gap: 25px;
 
       @include mixins.media-sm {
+        margin-top: 60px;
         flex-flow: column wrap;
         gap: 24px;
-        max-height: 600px;
+        height: 526px;
         width: 100%;
         justify-content: space-between;
+      }
+
+      @include mixins.media-sm {
+        gap: 29px;
+        height: 910px;
       }
     }
 
@@ -86,7 +116,6 @@
       }
 
       &-image {
-        display: block;
         width: 100%;
       }
 
@@ -96,6 +125,10 @@
         left: 0;
         width: 100%;
         height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
         background: linear-gradient(
           0deg,
           rgba(255 83 0 / 90%),
@@ -103,16 +136,39 @@
         );
       }
 
-      &-name {
-        @extend %h3;
+      &-search-icon {
+        margin-top: 39%;
+        height: 40px;
+        width: 40px;
 
-        // color: colors.$white;
+        @include mixins.media-sm {
+          margin-top: 0;
+        }
+
+        @include mixins.media-sm {
+          margin-top: 39%;
+        }
+      }
+
+      &-name {
+        @extend %h-search;
+
+        margin-top: 24px;
+
+        @include mixins.media-sm {
+          margin-top: 18px;
+        }
       }
 
       &-category {
         @extend %title;
 
-        // color: colors.$white;
+        margin-top: 7px;
+        color: colors.$white;
+
+        @include mixins.media-sm {
+          margin-top: 25px;
+        }
       }
     }
   }
