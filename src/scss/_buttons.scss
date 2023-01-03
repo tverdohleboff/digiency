@@ -9,7 +9,8 @@
   border-radius: 5px;
   color: colors.$white;
   background-color: colors.$orange;
-  box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
-  filter: drop-shadow(4px 5px 15px rgba(255 83 0 / 10%));
-  transition: box-shadow 0.2s ease-in;
+
+  &:hover {
+    filter: drop-shadow(4px 5px 15px rgba(255 83 0 / 40%));
+  }
 }

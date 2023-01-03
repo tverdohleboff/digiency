@@ -101,10 +101,6 @@
       @include mixins.media-lg {
         margin: 50px 0 0;
       }
-
-      &:hover {
-        box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
-      }
     }
   }
 
@@ -137,10 +133,6 @@
         background-color: colors.$white;
         box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
         transition: background-color 0.2s ease-in;
-
-        &:hover {
-          box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
-        }
 
         &:active {
           background-color: colors.$orange;
