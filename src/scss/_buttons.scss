@@ -9,6 +9,7 @@
   border-radius: 5px;
   color: colors.$white;
   background-color: colors.$orange;
+  transition: filter 0.2s ease-in;
 
   &:hover {
     filter: drop-shadow(4px 5px 15px rgba(255 83 0 / 40%));
