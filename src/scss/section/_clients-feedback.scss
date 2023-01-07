@@ -6,6 +6,10 @@
   padding: 50px 0;
   background-color: colors.$orange-background;
 
+  @include mixins.media-sm {
+    padding: 60px 0;
+  }
+
   &__text-block {
     text-align: center;
 
@@ -20,6 +24,15 @@
       padding: 0 65px;
 
       @extend %h-main;
+
+      @include mixins.media-sm {
+        padding: 0 155px;
+      }
+
+      @include mixins.media-lg {
+        margin-top: 25px;
+        padding: 0 350px;
+      }
     }
   }
 
@@ -27,12 +40,25 @@
   }
 
   &__comments-container {
+    margin-top: 18px;
+
+    @include mixins.media-sm {
+      margin-top: 60px;
+    }
+
     &-mentions {
-      margin-top: 18px;
       display: flex;
       flex-direction: row;
       overflow-x: scroll;
       gap: 18px;
+
+      @include mixins.media-sm {
+        gap: 54px;
+      }
+
+      @include mixins.media-lg {
+        gap: 150px;
+      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -43,6 +69,16 @@
       background-color: colors.$orange;
       min-width: 226px;
       margin-left: 20px;
+
+      @include mixins.media-sm {
+        margin-left: 25px;
+        min-width: 292px;
+      }
+
+      @include mixins.media-lg {
+        margin-left: 40px;
+        min-width: 470px;
+      }
 
       &-text-section {
         color: colors.$white;
@@ -72,11 +108,34 @@
         height: 40px;
         width: 40px;
         overflow: hidden;
+
+        @include mixins.media-sm {
+          height: 50px;
+          width: 50px;
+        }
       }
     }
 
+    &-slider-box {
+      margin-top: 17.5px;
+      display: flex;
+      justify-content: center;
+    }
+
     &-slider {
-      margin-top: 25px;
+      height: 15px;
+      width: 87px;
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+
+      @include mixins.media-sm {
+        margin-top: 52.5px;
+      }
+
+      @include mixins.media-sm {
+        margin-top: 42.5px;
+      }
     }
   }
 }
