@@ -121,6 +121,35 @@
   }
 }
 
+%h-opinion-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24.1px;
+
+  @include mixins.media-sm {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.72px;
+  }
+  @include mixins.media-lg {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30.9px;
+  }
+}
+
+%h-opinion-post {
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 15.82px;
+
+  @include mixins.media-sm {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24.1px;
+  }
+}
+
 %title {
   color: colors.$gray-paragraph;
   font-weight: 400;
@@ -168,4 +197,10 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 24.72px;
+}
+
+%h6 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24.1px;
 }

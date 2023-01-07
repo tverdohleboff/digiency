@@ -22,6 +22,14 @@
   }
 }
 
+.tab-visible-text {
+  display: none;
+
+  @include mixins.media-sm {
+    display: inline;
+  }
+}
+
 .desktop-visible-text {
   display: none;
 

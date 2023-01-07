@@ -1,0 +1,82 @@
+@use '../mixins';
+@use '../colors';
+@use '../typography';
+
+.clients-feedback {
+  padding: 50px 0;
+  background-color: colors.$orange-background;
+
+  &__text-block {
+    text-align: center;
+
+    &-title {
+      margin-top: 18px;
+
+      @extend %title;
+    }
+
+    h3 {
+      margin-top: 18px;
+      padding: 0 65px;
+
+      @extend %h-main;
+    }
+  }
+
+  &__reviews-block {
+  }
+
+  &__comments-container {
+    &-mentions {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      gap: 18px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &-mention {
+      background-color: colors.$orange;
+      min-width: 226px;
+      margin-left: 20px;
+
+      &-text-section {
+        color: colors.$white;
+        padding: 26px 32px 15px 35px;
+      }
+
+      &-name {
+        @extend %h-opinion-name;
+      }
+
+      &-post {
+        margin-top: 10px;
+
+        @extend %h-opinion-post;
+      }
+
+      &-opinion {
+        margin-top: 15px;
+
+        @extend %h6;
+      }
+
+      &-photo {
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+      }
+    }
+
+    &-slider {
+      margin-top: 25px;
+    }
+  }
+}
