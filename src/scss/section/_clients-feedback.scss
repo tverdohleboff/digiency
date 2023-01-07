@@ -14,8 +14,6 @@
     text-align: center;
 
     &-title {
-      margin-top: 18px;
-
       @extend %title;
     }
 
@@ -37,11 +35,10 @@
   }
 
   &__reviews-block {
+    margin-top: 18px;
   }
 
   &__comments-container {
-    margin-top: 18px;
-
     @include mixins.media-sm {
       margin-top: 60px;
     }
@@ -69,6 +66,7 @@
       background-color: colors.$orange;
       min-width: 226px;
       margin-left: 20px;
+      position: relative;
 
       @include mixins.media-sm {
         margin-left: 25px;
@@ -82,7 +80,15 @@
 
       &-text-section {
         color: colors.$white;
-        padding: 26px 32px 15px 35px;
+        padding: 26px 12px 18px 35px;
+
+        @include mixins.media-sm {
+          padding: 26px 32px 15px 35px;
+        }
+
+        @include mixins.media-lg {
+          padding: 26px 35px 25px 65px;
+        }
       }
 
       &-name {
@@ -103,15 +109,25 @@
 
       &-photo {
         position: absolute;
-        top: -20px;
-        left: 10px;
         height: 40px;
         width: 40px;
-        overflow: hidden;
+        left: -20px;
+        top: 26px;
 
         @include mixins.media-sm {
           height: 50px;
           width: 50px;
+          left: -25px;
+        }
+
+        @include mixins.media-lg {
+          height: 80px;
+          width: 80px;
+          left: -40px;
+        }
+
+        &-img {
+          width: 100%;
         }
       }
     }
