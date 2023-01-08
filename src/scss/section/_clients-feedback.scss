@@ -125,10 +125,10 @@
           width: 80px;
           left: -40px;
         }
+      }
 
-        &-img {
-          width: 100%;
-        }
+      &-photo img {
+        width: 100%;
       }
     }
 
@@ -136,21 +136,21 @@
       margin-top: 17.5px;
       display: flex;
       justify-content: center;
-    }
 
-    &-slider {
-      height: 15px;
-      width: 87px;
-      display: flex;
-      flex-direction: row;
-      gap: 4px;
+      &-slider {
+        height: 15px;
+        width: 87px;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
 
-      @include mixins.media-sm {
-        margin-top: 52.5px;
-      }
+        @include mixins.media-sm {
+          margin-top: 52.5px;
+        }
 
-      @include mixins.media-sm {
-        margin-top: 42.5px;
+        @include mixins.media-sm {
+          margin-top: 42.5px;
+        }
       }
     }
   }

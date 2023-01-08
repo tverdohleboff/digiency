@@ -1,5 +1,5 @@
-@use 'colors';
 @use 'mixins';
+@use 'colors';
 
 %h-first {
   span {
@@ -144,6 +144,19 @@
   line-height: 15.82px;
 
   @include mixins.media-sm {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24.1px;
+  }
+}
+
+%title-small {
+  color: colors.$gray-paragraph;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 15.82px;
+
+  @include mixins.media-lg {
     font-weight: 400;
     font-size: 16px;
     line-height: 24.1px;

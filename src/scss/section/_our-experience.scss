@@ -1,7 +1,7 @@
 @use '../mixins';
-@use '../colors';
-@use '../buttons';
 @use '../typography';
+@use '../colors';
+@use '../blocks/buttons';
 
 .our-experience {
   padding: 50px 0;

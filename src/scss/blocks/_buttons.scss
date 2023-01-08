@@ -1,5 +1,5 @@
-@use 'colors';
-@use 'typography';
+@use '../colors';
+@use '../typography';
 
 %button {
   @extend %button-style;

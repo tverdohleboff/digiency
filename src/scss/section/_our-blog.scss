@@ -1,0 +1,189 @@
+@use '../mixins';
+@use '../typography';
+@use '../colors';
+
+.our-blog {
+  padding: 50px 0;
+  background-color: colors.$white;
+
+  @include mixins.media-sm {
+    padding: 120px 0;
+  }
+
+  &__text {
+    text-align: center;
+
+    h3 {
+      margin-top: 18px;
+
+      @extend %h-main;
+
+      @include mixins.media-lg {
+        margin-top: 25px;
+      }
+    }
+
+    &-title {
+      @extend %title;
+    }
+  }
+
+  &__blogs {
+    margin-top: 18px;
+    gap: 18px;
+
+    @include mixins.media-sm {
+      margin-top: 25px;
+      gap: 25px;
+    }
+
+    @include mixins.media-lg {
+      margin-top: 60px;
+    }
+
+    &-articles {
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &-article {
+      min-width: 296px;
+      padding: 18px 18px 27px;
+      gap: 18px;
+
+      @include mixins.media-sm {
+        min-width: 332px;
+        gap: 24px;
+        padding: 25px;
+      }
+
+      @include mixins.media-lg {
+        min-width: 570px;
+        gap: 30px;
+        padding: 18px;
+      }
+
+      &-synopsis {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        @include mixins.media-sm {
+          gap: 5px;
+        }
+
+        &-text {
+          color: colors.$black;
+
+          &-header {
+            @extend %h-opinion-post;
+
+            color: colors.$orange;
+          }
+
+          &-entry {
+            @extend %h-opinion-name;
+
+            margin-top: 6px;
+
+            @include mixins.media-sm {
+              margin-top: 22px;
+            }
+          }
+        }
+
+        &-picture {
+          width: 80px;
+          height: 80px;
+        }
+
+        &-picture img {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+
+      &-author {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        @include mixins.media-sm {
+          margin-top: 22px;
+          gap: 15px;
+        }
+
+        &-photo {
+          width: 40px;
+          height: 40px;
+
+          @include mixins.media-sm {
+            width: 60px;
+            height: 60px;
+          }
+        }
+
+        &-photo img {
+          object-fit: cover;
+          height: 100%;
+        }
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 1px;
+
+          @include mixins.media-sm {
+            gap: 6px;
+          }
+
+          &-name {
+            @extend %h-category;
+
+            color: colors.$black;
+          }
+
+          &-information {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            @extend %title-small;
+
+            @include mixins.media-sm {
+              gap: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &-slider-box {
+      margin-top: 17.5px;
+      display: flex;
+      justify-content: center;
+
+      &-slider {
+        height: 15px;
+        width: 87px;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+
+        @include mixins.media-sm {
+          margin-top: 52.5px;
+        }
+
+        @include mixins.media-sm {
+          margin-top: 52.5px;
+        }
+      }
+    }
+  }
+}
