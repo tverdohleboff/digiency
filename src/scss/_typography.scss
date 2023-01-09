@@ -45,6 +45,23 @@
   }
 }
 
+%h-main2 {
+  span {
+    color: colors.$orange;
+  }
+
+  color: colors.$black;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30.9px;
+
+  @include mixins.media-lg {
+    font-weight: 600;
+    font-size: 31.25px;
+    line-height: 38.62px;
+  }
+}
+
 %h-second {
   color: colors.$black;
   font-weight: 500;
@@ -81,6 +98,67 @@
   font-weight: 500;
   font-size: 25px;
   line-height: 30.9px;
+
+  @include mixins.media-sm {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24.1px;
+  }
+
+  @include mixins.media-lg {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.72px;
+  }
+}
+
+%h-contact-us-1 {
+  color: colors.$black;
+  font-weight: 600;
+  font-size: 31.25px;
+  line-height: 38.62px;
+
+  @include mixins.media-sm {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30.9px;
+  }
+
+  @include mixins.media-lg {
+    font-weight: 600;
+    font-size: 31.25px;
+    line-height: 38.62px;
+  }
+}
+
+%h-contact-us-2 {
+  color: colors.$orange;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30.9px;
+
+  @include mixins.media-sm {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.72px;
+  }
+
+  @include mixins.media-lg {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30.9px;
+  }
+}
+
+%h-contact-us-3 {
+  span {
+    color: colors.$orange;
+  }
+
+  color: colors.$gray-paragraph;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24.72px;
 
   @include mixins.media-sm {
     font-weight: 400;
@@ -216,4 +294,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24.1px;
+}
+
+%h7 {
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 15.82px;
 }
