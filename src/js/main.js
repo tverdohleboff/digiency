@@ -1,6 +1,9 @@
 import '../scss/main.scss';
 import initializeTabs from './tabs';
-// import initializeCarousel from './carousel';
+import initializeContactUsForm from './contactUsForm';
 
+initializeContactUsForm();
 initializeTabs();
+
+// import initializeCarousel from './carousel';
 // initializeCarousel();

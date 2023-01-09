@@ -1250,13 +1250,27 @@
             <div class="contact-us__message-send-header">Send Your <span>Message To Us</span>
             </div>
             <div class="contact-us__message-send-block">
-              <div class="contact-us__message-send-block-name">Name</div>
-              <div class="contact-us__message-send-block-email">Email</div>
-              <div class="contact-us__message-send-block-mobile">Mobile No</div>
-              <div class="contact-us__message-send-block-subject">Subject</div>
-              <div class="contact-us__message-send-block-send-message">Send message</div>
+              <form id="contactUsForm" class="contact-us__message-send-block-form">
+                <div class="contact-us__message-send-block-name contact-us__message-send-block-input-container">
+                  <input class ="contact-us__message-send-block-input" type="text" name="name" placeholder="Name"/>
+                </div>
+                <div class="contact-us__message-send-block-email contact-us__message-send-block-input-container">
+                  <input class ="contact-us__message-send-block-input" type="email" name="email" placeholder="Email"/>
+                </div>
+                <div class="contact-us__message-send-block-mobile contact-us__message-send-block-input-container">
+                  <input class ="contact-us__message-send-block-input" type="tel" name="mobileNo" placeholder="Mobile No"/>
+                </div>
+                <div class="contact-us__message-send-block-subject contact-us__message-send-block-input-container">
+                  <input class ="contact-us__message-send-block-input" type="text" name="subject" placeholder="Subject"/>
+                </div>
+                <div class="contact-us__message-send-block-send-message contact-us__message-send-block-input-container">
+                  <textarea  class ="contact-us__message-send-block-input" rows="5" type="text" name="sendMessage" placeholder="Send Message"></textarea>
+                </div>
+                <div class="contact-us__message-send-button-container">
+                  <button class="contact-us__message-send-button" type="submit">Send Message</button>
+                </div>
+              </form>
             </div>
-            <button class="contact-us__message-send-button" type="button">Send Message</button>
           </div>
         </div>
       </div>

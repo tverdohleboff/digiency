@@ -98,18 +98,51 @@
       }
 
       &-block {
-        @extend %title;
-
         margin-top: 18px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
+
+        &-form {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+        }
+
+        &-input-container {
+          flex: 0 0 100%;
+
+          & input,
+          & textarea {
+            @extend %title;
+
+            padding: 18px;
+            display: block;
+            width: 100%;
+            border: 0;
+            transition: box-shadow 0.2s ease-in;
+          }
+
+          & input:focus,
+          & textarea:focus,
+          & input:hover,
+          & textarea:hover,
+          & input:active,
+          & textarea:active {
+            border: 0;
+            box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+          }
+
+          & input:focus-visible,
+          & textarea:focus-visible {
+            outline: 0;
+          }
+        }
       }
     }
 
-    &-send-button {
+    &-send-button-container {
       margin-top: 25px;
+    }
 
+    &-send-button {
       @extend %button-send-message;
     }
   }
