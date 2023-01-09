@@ -1,0 +1,105 @@
+@use '../mixins';
+@use '../typography';
+@use '../colors';
+@use '../blocks/buttons';
+
+.contact-us {
+  padding: 50px 0;
+  background-color: colors.$white;
+
+  &__contacts {
+    &-text {
+      text-align: center;
+
+      &-title {
+        @extend %title;
+      }
+
+      h3 {
+        @extend %h-main;
+
+        margin-top: 18px;
+        padding: 0 60px;
+      }
+    }
+
+    &-communications {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    &-communication {
+      min-width: 343px;
+      padding: 18px 40px 30px 18px;
+
+      &-header {
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+
+        &-icon {
+          width: 75px;
+          height: 75px;
+          background-color: colors.$orange;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &-icon img {
+          display: flex;
+          width: 36px;
+          height: 36px;
+        }
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      &-footer {
+        margin-top: 34px;
+        gap: 10px;
+      }
+    }
+  }
+
+  &__message {
+    margin-top: 62.5px;
+
+    &-picture {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-send {
+      margin-top: 50px;
+
+      &-header {
+        text-align: center;
+        padding: 0 85px;
+
+        @extend %h-main;
+      }
+
+      &-block {
+        margin-top: 18px;
+        color: colors.$gray-paragraph;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+    }
+
+    &-send-button {
+      margin-top: 25px;
+
+      @extend %button;
+    }
+  }
+}
