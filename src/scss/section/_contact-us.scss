@@ -285,4 +285,16 @@
       @extend %button-send-message;
     }
   }
+
+  &__map {
+    padding: 50px 0;
+    overflow: hidden;
+
+    &__map img {
+      @include mixins.media-sm {
+        height: 250px;
+        width: 688px;
+      }
+    }
+  }
 }
