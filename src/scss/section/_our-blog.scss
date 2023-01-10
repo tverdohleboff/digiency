@@ -30,21 +30,29 @@
 
   &__blogs {
     margin-top: 18px;
-    gap: 18px;
+    gap: 8px;
 
     @include mixins.media-sm {
-      margin-top: 25px;
+      margin-top: 15px;
       gap: 25px;
     }
 
     @include mixins.media-lg {
-      margin-top: 60px;
+      margin-top: 50px;
     }
 
     &-articles {
       display: flex;
       flex-direction: row;
       overflow-x: scroll;
+
+      @include mixins.media-sm {
+        gap: 4px;
+      }
+
+      @include mixins.media-lg {
+        gap: 10px;
+      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -54,17 +62,22 @@
     &-article {
       min-width: 296px;
       padding: 18px 18px 27px;
-      gap: 18px;
+      transition: box-shadow 0.2s ease-in;
+      margin: 10px;
+
+      &:focus,
+      &:hover,
+      &:active {
+        box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+      }
 
       @include mixins.media-sm {
         min-width: 332px;
-        gap: 24px;
         padding: 25px;
       }
 
       @include mixins.media-lg {
         min-width: 570px;
-        gap: 30px;
         padding: 18px;
       }
 
@@ -165,7 +178,7 @@
     }
 
     &-slider-box {
-      margin-top: 17.5px;
+      margin-top: 7.5px;
       display: flex;
       justify-content: center;
 
@@ -177,11 +190,7 @@
         gap: 4px;
 
         @include mixins.media-sm {
-          margin-top: 52.5px;
-        }
-
-        @include mixins.media-sm {
-          margin-top: 52.5px;
+          margin-top: 42.5px;
         }
       }
     }
