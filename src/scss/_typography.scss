@@ -161,12 +161,24 @@
   line-height: 24.72px;
 
   @include mixins.media-sm {
+    span {
+      font-weight: 400;
+      font-size: 13.8px;
+      line-height: 15.82px;
+    }
+
     font-weight: 400;
     font-size: 16px;
     line-height: 24.1px;
   }
 
   @include mixins.media-lg {
+    span {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24.72px;
+    }
+
     font-weight: 500;
     font-size: 20px;
     line-height: 24.72px;

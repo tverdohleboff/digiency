@@ -20,6 +20,10 @@
 
         margin-top: 18px;
         padding: 0 60px;
+
+        @include mixins.media-sm {
+          padding: 0 190px;
+        }
       }
     }
 
@@ -28,16 +32,31 @@
       display: flex;
       flex-direction: column;
       gap: 25px;
+
+      @include mixins.media-sm {
+        margin-top: 60px;
+        gap: 24px;
+        flex-direction: row;
+      }
     }
 
     &-communication {
       min-width: 343px;
       padding: 18px 40px 30px 18px;
 
+      @include mixins.media-sm {
+        min-width: 217px;
+        padding: 18px 5px 18px 18px;
+      }
+
       &-header {
         display: flex;
         flex-direction: row;
         gap: 18px;
+
+        @include mixins.media-sm {
+          gap: 15px;
+        }
 
         &-icon {
           width: 75px;
@@ -47,12 +66,22 @@
           display: flex;
           align-items: center;
           justify-content: center;
+
+          @include mixins.media-sm {
+            width: 40px;
+            height: 40px;
+          }
         }
 
         &-icon img {
           display: flex;
           width: 36px;
           height: 36px;
+
+          @include mixins.media-sm {
+            width: 18px;
+            height: 18px;
+          }
         }
 
         &-text {
@@ -74,12 +103,22 @@
         gap: 10px;
 
         @extend %h-contact-us-3;
+
+        @include mixins.media-sm {
+          margin-top: 18px;
+        }
       }
     }
   }
 
   &__message {
     margin-top: 62.5px;
+
+    @include mixins.media-sm {
+      margin-top: 60px;
+      display: flex;
+      gap: 20px;
+    }
 
     &-picture {
       display: flex;
@@ -90,11 +129,21 @@
     &-send {
       margin-top: 50px;
 
+      @include mixins.media-sm {
+        margin-top: 0;
+        flex-basis: 59%;
+      }
+
       &-header {
         text-align: center;
         padding: 0 85px;
 
         @extend %h-main2;
+
+        @include mixins.media-sm {
+          text-align: left;
+          padding: 0 30px 0 0;
+        }
       }
 
       &-block {
@@ -118,6 +167,10 @@
             width: 100%;
             border: 0;
             transition: box-shadow 0.2s ease-in;
+
+            @include mixins.media-sm {
+              padding: 13px 18px;
+            }
           }
 
           & input:focus,
