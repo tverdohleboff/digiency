@@ -24,6 +24,11 @@
         @include mixins.media-sm {
           padding: 0 190px;
         }
+
+        @include mixins.media-sm {
+          margin-top: 25px;
+          padding: 0 390px;
+        }
       }
     }
 
@@ -56,6 +61,11 @@
         padding: 18px 5px 18px 18px;
       }
 
+      @include mixins.media-lg {
+        min-width: 370px;
+        padding: 18px 18px 24px;
+      }
+
       &-header {
         display: flex;
         flex-direction: row;
@@ -63,6 +73,9 @@
 
         @include mixins.media-sm {
           gap: 15px;
+        }
+        @include mixins.media-lg {
+          gap: 18px;
         }
 
         &-icon {
@@ -118,6 +131,11 @@
           gap: 15px;
           margin-top: 18px;
         }
+
+        @include mixins.media-sm {
+          gap: 18px;
+          margin-top: 37px;
+        }
       }
     }
   }
@@ -131,10 +149,25 @@
       gap: 20px;
     }
 
+    @include mixins.media-lg {
+      gap: 50px;
+    }
+
     &-picture {
       display: flex;
       align-items: center;
       justify-content: center;
+      min-width: 280px;
+
+      @include mixins.media-sm {
+        margin-top: 40px;
+      }
+    }
+
+    &-picture img {
+      @include mixins.media-lg {
+        min-width: 450px;
+      }
     }
 
     &-send {
@@ -160,14 +193,32 @@
       &-block {
         margin-top: 18px;
 
+        &-short-text {
+          display: flex;
+          gap: 18px;
+          flex-wrap: wrap;
+
+          @include mixins.media-sm {
+            gap: 10px;
+          }
+        }
+
         &-form {
           display: flex;
           flex-direction: column;
           gap: 18px;
+
+          @include mixins.media-lg {
+            gap: 29px;
+          }
         }
 
         &-input-container {
           flex: 0 0 100%;
+
+          @include mixins.media-sm {
+            flex: 0 0 calc(100% / 2 - 5px);
+          }
 
           & input,
           & textarea {
@@ -181,6 +232,22 @@
 
             @include mixins.media-sm {
               padding: 13px 18px;
+            }
+          }
+
+          & input {
+            @include mixins.media-lg {
+              min-height: 60px;
+            }
+          }
+          & textarea {
+            @include mixins.media-sm {
+              min-height: 109px;
+            }
+
+            @include mixins.media-lg {
+              min-height: 163px;
+              min-width: 670px;
             }
           }
 
@@ -203,7 +270,15 @@
     }
 
     &-send-button-container {
-      margin-top: 25px;
+      margin-top: 7px;
+
+      @include mixins.media-sm {
+        margin-top: 20px;
+      }
+
+      @include mixins.media-lg {
+        margin-top: 0;
+      }
     }
 
     &-send-button {
