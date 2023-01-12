@@ -6,7 +6,33 @@
   padding: 18px;
   background-color: colors.$orange;
   color: colors.$white;
-  text-align: center;
 
   @extend %h6;
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    @include mixins.media-lg {
+      justify-content: space-between;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &-button {
+      display: none;
+      background-color: transparent;
+      border: 0;
+
+      @include mixins.media-lg {
+        display: block;
+      }
+    }
+  }
 }

@@ -1,6 +1,28 @@
 @use 'mixins';
 @use 'colors';
 
+%header-1 {
+  span {
+    color: colors.$orange;
+  }
+
+  color: colors.$black;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30.9px;
+
+  @include mixins.media-sm {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24.72px;
+  }
+
+  @include mixins.media-lg {
+    font-size: 39.06px;
+    line-height: 48.28px;
+  }
+}
+
 %h-first {
   span {
     color: colors.$orange;
@@ -347,6 +369,13 @@
   font-weight: 600;
   font-size: 31.25px;
   line-height: 38.62px;
+}
+
+%h3-1 {
+  color: colors.$black;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24.72px;
 }
 
 %h4 {

@@ -1,0 +1,63 @@
+@use '../mixins';
+@use '../typography';
+@use '../colors';
+
+.header {
+  height: 50px;
+  background-color: colors.$white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+
+  @include mixins.media-sm {
+    height: 80px;
+    box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+  }
+
+  @include mixins.media-lg {
+    height: 100px;
+  }
+
+  &__main {
+    padding: 9px 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-name {
+      flex: 0 0 33.3%;
+
+      &-company {
+        @extend %header-1;
+
+        margin-left: 1px;
+      }
+    }
+
+    &-navigation {
+      display: none;
+    }
+
+    &-theme {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      width: 24px;
+      flex: 0 0 33.3%;
+    }
+
+    &-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      width: 24px;
+      flex: 0 0 33.3%;
+      justify-content: right;
+    }
+  }
+}

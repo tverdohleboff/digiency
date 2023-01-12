@@ -6,6 +6,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+li {
+  list-style-type: none; /* Убираем маркеры */
+}
+
+ul {
+  margin: 0; /* Отступ слева в браузере IE и Opera */
+  padding: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
 .common-container {
   width: 100%;
   margin: 0;
@@ -27,6 +36,14 @@
 
   @include mixins.media-sm {
     display: inline;
+  }
+}
+
+.tab-invisible-text {
+  display: inline;
+
+  @include mixins.media-sm {
+    display: none;
   }
 }
 
