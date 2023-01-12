@@ -1,0 +1,105 @@
+@use '../mixins';
+@use '../typography';
+@use '../colors';
+
+.footer {
+  background-color: colors.$black;
+  color: colors.$white;
+  padding: 50px 0;
+
+  &__main {
+    h3 {
+      @extend %h-main;
+
+      color: colors.$white;
+    }
+
+    p {
+      margin-top: 18px;
+    }
+
+    &-social-links {
+      margin-top: 18px;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 27px;
+
+        li {
+          flex: 0 0 40px;
+          width: 40px;
+          height: 40px;
+          background-color: colors.$white;
+          box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+          transition: background-color 0.2s ease-in;
+
+          &:hover {
+            background-color: colors.$orange;
+          }
+
+          a {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+
+            svg path {
+              transition: fill 0.2s ease-in;
+            }
+          }
+
+          &:hover a svg path {
+            fill: colors.$white;
+          }
+        }
+      }
+    }
+  }
+
+  &__company {
+    margin-top: 50px;
+
+    ul {
+      margin-top: 18px;
+      gap: 11px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__services {
+    margin-top: 50px;
+
+    ul {
+      margin-top: 18px;
+      gap: 11px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__newsletter {
+    margin-top: 50px;
+
+    p {
+      margin-top: 18px;
+    }
+
+    &-subscribe {
+      & input {
+        margin-top: 18px;
+      }
+
+      &-input input {
+        background-color: colors.$black;
+        padding: 18px;
+        border: 0;
+      }
+    }
+  }
+}
