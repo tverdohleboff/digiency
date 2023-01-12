@@ -9,13 +9,15 @@
 
   &__main {
     h3 {
-      @extend %h-main;
+      @extend %footer-h;
 
       color: colors.$white;
     }
 
     p {
       margin-top: 18px;
+
+      @extend %h6;
     }
 
     &-social-links {
@@ -64,41 +66,97 @@
   &__company {
     margin-top: 50px;
 
+    h4 {
+      @extend %footer-h2;
+    }
+
     ul {
       margin-top: 18px;
       gap: 11px;
       display: flex;
       flex-direction: column;
+
+      @extend %h6;
+
+      li {
+        a {
+          color: colors.$white;
+          text-decoration-line: none;
+        }
+      }
     }
   }
 
   &__services {
     margin-top: 50px;
 
+    h4 {
+      @extend %footer-h2;
+    }
+
     ul {
       margin-top: 18px;
       gap: 11px;
       display: flex;
       flex-direction: column;
+
+      @extend %h6;
+
+      li {
+        a {
+          color: colors.$white;
+          text-decoration-line: none;
+        }
+      }
     }
   }
 
   &__newsletter {
     margin-top: 50px;
 
+    h4 {
+      @extend %footer-h2;
+    }
+
     p {
       margin-top: 18px;
+
+      @extend %h6;
     }
 
     &-subscribe {
-      & input {
-        margin-top: 18px;
+      margin-top: 18px;
+      height: 60px;
+      display: flex;
+      flex-direction: row;
+
+      &-input {
+        flex-basis: 77%;
+
+        & input {
+          background-color: colors.$black;
+          padding: 18px;
+          border: 0;
+          width: 100%;
+
+          @extend %footer-input;
+        }
+
+        & input:focus-visible {
+          outline: 0;
+        }
       }
 
-      &-input input {
-        background-color: colors.$black;
-        padding: 18px;
-        border: 0;
+      &-button {
+        background-color: colors.$orange;
+        flex-basis: 23%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img {
+          min-width: 24px;
+        }
       }
     }
   }
