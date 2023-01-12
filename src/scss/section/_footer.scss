@@ -8,156 +8,176 @@
   padding: 50px 0;
 
   &__main {
-    h3 {
-      @extend %footer-h;
-
-      color: colors.$white;
-    }
-
-    p {
-      margin-top: 18px;
-
-      @extend %h6;
-    }
-
-    &-social-links {
-      margin-top: 18px;
-
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        gap: 27px;
-
-        li {
-          flex: 0 0 40px;
-          width: 40px;
-          height: 40px;
-          background-color: colors.$white;
-          box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
-          transition: background-color 0.2s ease-in;
-
-          &:hover {
-            background-color: colors.$orange;
-          }
-
-          a {
-            display: flex;
-            width: 40px;
-            height: 40px;
-            align-items: center;
-            justify-content: center;
-
-            svg path {
-              transition: fill 0.2s ease-in;
-            }
-          }
-
-          &:hover a svg path {
-            fill: colors.$white;
-          }
-        }
-      }
-    }
-  }
-
-  &__company {
-    margin-top: 50px;
-
-    h4 {
-      @extend %footer-h2;
-    }
-
-    ul {
-      margin-top: 18px;
-      gap: 11px;
-      display: flex;
-      flex-direction: column;
-
-      @extend %h6;
-
-      li {
-        a {
-          color: colors.$white;
-          text-decoration-line: none;
-        }
-      }
-    }
-  }
-
-  &__services {
-    margin-top: 50px;
-
-    h4 {
-      @extend %footer-h2;
-    }
-
-    ul {
-      margin-top: 18px;
-      gap: 11px;
-      display: flex;
-      flex-direction: column;
-
-      @extend %h6;
-
-      li {
-        a {
-          color: colors.$white;
-          text-decoration-line: none;
-        }
-      }
-    }
-  }
-
-  &__newsletter {
-    margin-top: 50px;
-
-    h4 {
-      @extend %footer-h2;
-    }
-
-    p {
-      margin-top: 18px;
-
-      @extend %h6;
-    }
-
-    &-subscribe {
-      margin-top: 18px;
-      height: 60px;
+    @include mixins.media-sm {
       display: flex;
       flex-direction: row;
+    }
 
-      &-input {
-        flex-basis: 77%;
+    &-about {
+      h3 {
+        @extend %footer-h;
 
-        & input {
-          background-color: colors.$black;
-          padding: 18px;
-          border: 0;
-          width: 100%;
-
-          @extend %footer-input;
-        }
-
-        & input:focus-visible {
-          outline: 0;
-        }
+        color: colors.$white;
       }
 
-      &-button {
-        background-color: colors.$orange;
-        flex-basis: 23%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      p {
+        margin-top: 18px;
 
-        & img {
-          min-width: 24px;
+        @extend %h6;
+      }
+
+      &-social-links {
+        margin-top: 18px;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          gap: 27px;
+
+          li {
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+            background-color: colors.$white;
+            box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+            transition: background-color 0.2s ease-in;
+
+            &:hover {
+              background-color: colors.$orange;
+            }
+
+            a {
+              display: flex;
+              width: 40px;
+              height: 40px;
+              align-items: center;
+              justify-content: center;
+
+              svg path {
+                transition: fill 0.2s ease-in;
+              }
+            }
+
+            &:hover a svg path {
+              fill: colors.$white;
+            }
+          }
+        }
+      }
+    }
+
+    &-company {
+      margin-top: 50px;
+
+      h4 {
+        @extend %footer-h2;
+      }
+
+      ul {
+        margin-top: 18px;
+        gap: 11px;
+        display: flex;
+        flex-direction: column;
+
+        @extend %h6;
+
+        li {
+          a {
+            color: colors.$white;
+            text-decoration-line: none;
+          }
+        }
+      }
+    }
+
+    &-services {
+      margin-top: 50px;
+
+      h4 {
+        @extend %footer-h2;
+      }
+
+      ul {
+        margin-top: 18px;
+        gap: 11px;
+        display: flex;
+        flex-direction: column;
+
+        @extend %h6;
+
+        li {
+          a {
+            color: colors.$white;
+            text-decoration-line: none;
+          }
+        }
+      }
+    }
+
+    &-newsletter {
+      margin-top: 50px;
+
+      h4 {
+        @extend %footer-h2;
+      }
+
+      p {
+        margin-top: 18px;
+
+        @extend %h6;
+      }
+
+      &-subscribe {
+        margin-top: 18px;
+        height: 62px;
+
+        &-form {
+          display: flex;
+          flex-direction: row;
+        }
+
+        &-input-block {
+          flex-basis: 77%;
+          border: 1px solid colors.$orange;
+
+          & input {
+            background-color: colors.$black;
+            padding: 18px;
+            border: 0;
+            width: 100%;
+
+            @extend %footer-input;
+          }
+
+          & input:focus-visible {
+            outline: 0;
+          }
+        }
+
+        &-button {
+          background-color: colors.$orange;
+          flex-basis: 23%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+
+          & img {
+            min-width: 24px;
+          }
         }
       }
     }
   }
+}
+
+li {
+  list-style-type: none; /* Убираем маркеры */
+}
+ul {
+  margin-left: 0; /* Отступ слева в браузере IE и Opera */
+  padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
