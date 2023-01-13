@@ -240,7 +240,7 @@
               min-height: 60px;
             }
           }
-          
+
           & textarea {
             @include mixins.media-sm {
               min-height: 109px;
@@ -288,7 +288,7 @@
   }
 
   &__map {
-    padding: 50px 0;
+    padding: 50px 0 0;
     overflow: hidden;
 
     &__map img {

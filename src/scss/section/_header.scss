@@ -21,24 +21,71 @@
   }
 
   &__main {
-    padding: 9px 13px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
+    @include mixins.media-sm {
+      padding: 27px 0 28px;
+    }
+
+    @include mixins.media-lg {
+      padding: 26px 0;
+    }
+
     &-name {
       flex: 0 0 33.3%;
+      @include mixins.media-sm {
+        flex: 0 0 13%;
+        display: flex;
+      }
+
+      @include mixins.media-lg {
+        flex: 0 0 19%;
+      }
 
       &-company {
         @extend %header-1;
 
         margin-left: 1px;
+
+        @include mixins.media-sm {
+          margin-left: 40px;
+        }
+
+        @include mixins.media-lg {
+          margin-left: 135px;
+        }
       }
     }
 
     &-navigation {
       display: none;
+
+      @include mixins.media-sm {
+        display: block;
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+
+        @include mixins.media-lg {
+          gap: 38px;
+        }
+
+        & > li {
+          a {
+            @extend %h-paper-name;
+
+            color: colors.$black;
+            text-decoration-line: none;
+          }
+        }
+      }
     }
 
     &-theme {
@@ -48,16 +95,28 @@
       height: 24px;
       width: 24px;
       flex: 0 0 33.3%;
+
+      @include mixins.media-sm {
+        flex: 0 0 3%;
+        margin-right: 40px;
+      }
+
+      @include mixins.media-lg {
+        flex: 0 0 1%;
+        margin-right: 135px;
+      }
     }
 
     &-menu {
       display: flex;
       align-items: center;
-      justify-content: center;
       height: 24px;
-      width: 24px;
       flex: 0 0 33.3%;
       justify-content: right;
+
+      @include mixins.media-sm {
+        display: none;
+      }
     }
   }
 }

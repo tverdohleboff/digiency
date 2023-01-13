@@ -1,0 +1,55 @@
+@use '../mixins';
+@use '../colors';
+
+.client-logo {
+  padding: 0 0 50px;
+  background-color: colors.$white;
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+    justify-content: space-around;
+
+    @include mixins.media-sm {
+      gap: 31px;
+    }
+
+    @include mixins.media-lg {
+      gap: 92px;
+    }
+
+    &-icon {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70px 55px;
+      padding: 35px;
+
+      @include mixins.media-sm {
+        background-size: 150px 110px;
+        padding: 75px;
+      }
+
+      @include mixins.media-lg {
+        background-size: 225px 170px;
+        padding: 113px;
+      }
+
+      &-1 {
+        background-image: url('../images/client-logo/frame-1.svg');
+      }
+
+      &-2 {
+        background-image: url('../images/client-logo/frame-2.svg');
+      }
+
+      &-3 {
+        background-image: url('../images/client-logo/frame-3.svg');
+      }
+
+      &-4 {
+        background-image: url('../images/client-logo/frame-4.svg');
+      }
+    }
+  }
+}
