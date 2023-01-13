@@ -22,6 +22,10 @@
       gap: 14px;
     }
 
+    @include mixins.media-lg {
+      gap: 90px;
+    }
+
     &-company {
       @include mixins.media-sm {
         flex-basis: calc(100% / 4 - 10px);
@@ -33,9 +37,17 @@
 
       &-list {
         margin-top: 18px;
-        gap: 11px;
+        gap: 10px;
         display: flex;
         flex-direction: column;
+
+        @include mixins.media-sm {
+          gap: 8px;
+        }
+
+        @include mixins.media-lg {
+          gap: 10px;
+        }
 
         @extend %h6;
 
@@ -59,9 +71,17 @@
 
       &-list {
         margin-top: 18px;
-        gap: 11px;
+        gap: 10px;
         display: flex;
         flex-direction: column;
+
+        @include mixins.media-sm {
+          gap: 8px;
+        }
+
+        @include mixins.media-lg {
+          gap: 10px;
+        }
 
         @extend %h6;
 
@@ -89,6 +109,10 @@
         margin-top: 18px;
 
         @extend %h6;
+
+        @include mixins.media-sm {
+          max-width: 245px;
+        }
       }
 
       &-social-links {
@@ -104,6 +128,10 @@
 
           @include mixins.media-sm {
             gap: 11px;
+          }
+
+          @include mixins.media-lg {
+            gap: 22px;
           }
 
           & > li {

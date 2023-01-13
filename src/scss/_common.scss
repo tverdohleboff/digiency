@@ -45,6 +45,10 @@ ul {
   @include mixins.media-sm {
     display: none;
   }
+
+  @include mixins.media-lg {
+    display: inline;
+  }
 }
 
 .desktop-visible-text {
@@ -52,5 +56,13 @@ ul {
 
   @include mixins.media-lg {
     display: inline;
+  }
+}
+
+.desktop-invisible-text {
+  display: inline;
+
+  @include mixins.media-lg {
+    display: none;
   }
 }
