@@ -112,9 +112,10 @@
     gap: 18px;
     align-items: center;
     transition: box-shadow 0.2s ease-in;
+    box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
 
     &:hover {
-      box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
+      box-shadow: 0 1px 10px rgba(0 0 0 / 25%);
     }
 
     @include mixins.media-sm {
