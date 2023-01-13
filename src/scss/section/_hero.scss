@@ -52,9 +52,22 @@
   }
 
   &__image {
-    img {
-      display: block;
-      width: 100%;
+    background-image: url('../images/hero/image.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 330px;
+    padding: 225px 0 0;
+
+    @include mixins.media-sm {
+      background-position: left top;
+      background-size: 307px;
+      padding: 207px 0 0;
+    }
+
+    @include mixins.media-lg {
+      background-position: left top;
+      background-size: 639px;
+      padding: 429px 0 0;
     }
   }
 
