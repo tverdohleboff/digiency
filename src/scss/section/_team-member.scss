@@ -62,11 +62,7 @@
     height: 350px;
     background-color: colors.$white;
     position: relative;
-    transition: box-shadow 0.2s ease-in;
-
-    &:hover {
-      box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
-    }
+    box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
 
     @include mixins.media-sm {
       width: 213px;

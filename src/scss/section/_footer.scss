@@ -55,6 +55,10 @@
           a {
             color: colors.$white;
             text-decoration-line: none;
+
+            &:hover {
+              color: colors.$orange;
+            }
           }
         }
       }
@@ -89,6 +93,10 @@
           a {
             color: colors.$white;
             text-decoration-line: none;
+
+            &:hover {
+              color: colors.$orange;
+            }
           }
         }
       }

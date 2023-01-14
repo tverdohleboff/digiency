@@ -62,14 +62,8 @@
     &-article {
       min-width: 296px;
       padding: 18px 18px 27px;
-      transition: box-shadow 0.2s ease-in;
+      box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
       margin: 10px;
-
-      &:focus,
-      &:hover,
-      &:active {
-        box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
-      }
 
       @include mixins.media-sm {
         min-width: 332px;

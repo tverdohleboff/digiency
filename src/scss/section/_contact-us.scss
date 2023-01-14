@@ -48,13 +48,7 @@
     &-communication {
       min-width: 343px;
       padding: 18px 40px 30px 18px;
-      transition: box-shadow 0.2s ease-in;
-
-      &:focus,
-      &:hover,
-      &:active {
-        box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
-      }
+      box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
 
       @include mixins.media-sm {
         min-width: 217px;
@@ -299,10 +293,18 @@
     padding: 50px 0 0;
     overflow: hidden;
 
-    &__map img {
+    img {
+      display: block;
+      height: 250px;
+      object-position: 50% 50%;
+
       @include mixins.media-sm {
-        height: 250px;
-        width: 688px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      @include mixins.media-lg {
+        height: 450px;
       }
     }
   }

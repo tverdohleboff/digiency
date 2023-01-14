@@ -12,9 +12,10 @@
   color: colors.$white;
   background-color: colors.$orange;
   transition: filter 0.2s ease-in;
+  filter: drop-shadow(4px 5px 15px rgba(255 83 0 / 40%));
 
   &:hover {
-    filter: drop-shadow(4px 5px 15px rgba(255 83 0 / 40%));
+    filter: drop-shadow(4px 5px 15px rgba(255 83 0 / 70%));
   }
 }
 
@@ -29,8 +30,9 @@
   color: colors.$white;
   background-color: colors.$orange;
   transition: filter 0.2s ease-in;
+  filter: drop-shadow(4px 5px 15px rgba(255 83 0 / 40%));
 
   &:hover {
-    filter: drop-shadow(4px 5px 15px rgba(255 83 0 / 40%));
+    filter: drop-shadow(4px 5px 15px rgba(255 83 0 / 70%));
   }
 }
