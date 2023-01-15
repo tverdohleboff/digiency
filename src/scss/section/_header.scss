@@ -118,5 +118,36 @@
         display: none;
       }
     }
+
+    &-burger-menu {
+      display: none;
+
+      justify-content: flex-end;
+
+      &-list {
+        background-color: colors.$white;
+        padding: 50px 65px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @extend %h4;
+
+        & > li {
+          a {
+            color: colors.$black;
+            text-decoration-line: none;
+
+            &:active {
+              color: colors.$orange;
+            }
+          }
+        }
+      }
+
+      @include mixins.media-sm {
+        display: none;
+      }
+    }
   }
 }
