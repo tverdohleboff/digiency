@@ -2,6 +2,13 @@ function initializeShowBurgerMenu() {
   const forClick = document.querySelector('.header__main-menu');
   forClick.addEventListener('click', refreshMenu);
 
+  const forUrlClicks = document.querySelectorAll(
+    '.header__main-burger-menu-list-url'
+  );
+  for (const forUrlClick of forUrlClicks) {
+    forUrlClick.addEventListener('click', closeMenu);
+  }
+
   let menuIsOpen = false;
 
   function refreshMenu() {
