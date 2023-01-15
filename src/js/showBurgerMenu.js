@@ -12,10 +12,23 @@ function initializeShowBurgerMenu() {
   let menuIsOpen = false;
 
   function refreshMenu() {
+    // refreshIconButton();
     if (menuIsOpen === false) {
       showMenu();
     } else {
       closeMenu();
+    }
+  }
+
+  function refreshIconButton() {
+    if (menuIsOpen === true) {
+      const burgerIcon = document.querySelector('header__main-menu-block-icon');
+      burgerIcon.style.display = 'none';
+    } else {
+      const burgerClose = document.querySelector(
+        'header__main-menu-block-close'
+      );
+      burgerClose.style.display = 'block';
     }
   }
 
