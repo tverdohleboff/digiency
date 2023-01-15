@@ -11,4 +11,4 @@ function scrollToTop() {
   });
 }
 
-export default initializeScrollToTop();
+export default initializeScrollToTop;

@@ -9,7 +9,7 @@ initializeContactUsForm();
 initializeTabs();
 initializeSubscribeForm();
 initializeScrollToTop();
-initializeShowBurgerMenu()();
+initializeShowBurgerMenu();
 
 // import initializeCarousel from './carousel';
 // initializeCarousel();
