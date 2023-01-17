@@ -147,10 +147,6 @@
         box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
         transition: background-color 0.2s ease-in;
 
-        &:active {
-          background-color: colors.$orange;
-        }
-
         a {
           display: flex;
           width: 40px;
@@ -161,10 +157,6 @@
           svg path {
             transition: fill 0.2s ease-in;
           }
-        }
-
-        &:active a svg path {
-          fill: colors.$white;
         }
       }
     }

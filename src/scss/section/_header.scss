@@ -83,17 +83,6 @@
             @extend %h-paper-name;
 
             color: colors.$black;
-            text-decoration-line: none;
-
-            &:active {
-              color: colors.$orange;
-            }
-
-            @include mixins.media-lg {
-              &:hover {
-                color: colors.$orange;
-              }
-            }
           }
         }
       }
@@ -171,11 +160,6 @@
         & > li {
           a {
             color: colors.$black;
-            text-decoration-line: none;
-
-            &:active {
-              color: colors.$orange;
-            }
           }
         }
       }

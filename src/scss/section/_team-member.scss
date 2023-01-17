@@ -124,10 +124,6 @@
             transition: transform 0.2s ease-in 0.375s;
           }
 
-          &:active {
-            background-color: colors.$orange;
-          }
-
           a {
             display: flex;
             width: 40px;
@@ -138,10 +134,6 @@
             svg path {
               transition: fill 0.2s ease-in;
             }
-          }
-
-          &:active a svg path {
-            fill: colors.$white;
           }
         }
       }

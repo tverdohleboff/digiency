@@ -1,4 +1,5 @@
 @use 'mixins';
+@use './colors';
 
 * {
   font-family: 'Work Sans', sans-serif;
@@ -13,6 +14,34 @@ li {
 ul {
   margin: 0; /* Отступ слева в браузере IE и Opera */
   padding: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+a {
+  text-decoration-line: none;
+}
+
+a[class~='text'] {
+  &:active {
+    color: colors.$orange;
+  }
+
+  @include mixins.media-lg {
+    &:hover {
+      color: colors.$orange;
+    }
+  }
+}
+
+ul[class~='svg-image'] {
+  li {
+    &:active {
+      background-color: colors.$orange;
+    }
+
+    &:active a svg path {
+      fill: colors.$white;
+    }
+  }
 }
 
 .common-container {
