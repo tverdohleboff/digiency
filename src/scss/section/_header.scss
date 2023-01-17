@@ -3,7 +3,6 @@
 @use '../colors';
 
 .header {
-  height: 50px;
   background-color: colors.$white;
   position: absolute;
   top: 0;
@@ -12,12 +11,7 @@
   width: 100%;
 
   @include mixins.media-sm {
-    height: 80px;
     box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
-  }
-
-  @include mixins.media-lg {
-    height: 100px;
   }
 
   &__main {
@@ -25,40 +19,25 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
 
     @include mixins.media-sm {
-      padding: 27px 0 28px;
+      height: 80px;
     }
 
     @include mixins.media-lg {
-      padding: 26px 0;
+      height: 100px;
     }
 
     &-name {
       flex: 0 0 33.3%;
-      @include mixins.media-sm {
-        flex: 0 0 13%;
-        display: flex;
-      }
 
-      @include mixins.media-lg {
-        flex: 0 0 19%;
+      @include mixins.media-sm {
+        flex: 0 0 auto;
       }
 
       &-company {
-        padding: 10px;
-
         @extend %header-1;
-
-        margin-left: 1px;
-
-        @include mixins.media-sm {
-          margin-left: 40px;
-        }
-
-        @include mixins.media-lg {
-          margin-left: 135px;
-        }
       }
     }
 
@@ -97,13 +76,25 @@
       flex: 0 0 33.3%;
 
       @include mixins.media-sm {
-        flex: 0 0 3%;
-        margin-right: 40px;
+        flex: 0 0 auto;
       }
 
-      @include mixins.media-lg {
-        flex: 0 0 1%;
-        margin-right: 135px;
+      &-button {
+        font-size: 0;
+        display: block;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/header/theme-light.svg');
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        transition: background-image 0.2s ease-in;
+
+        &:hover {
+          background-image: url('../images/header/theme-light-hover.svg');
+        }
       }
     }
 
@@ -121,9 +112,10 @@
       &-block {
         width: 44px;
         height: 44px;
+        position: relative;
+        left: 8px;
 
         &-icon {
-          margin-right: 13px;
           width: 100%;
           height: 100%;
           display: flex;
@@ -132,7 +124,6 @@
         }
 
         &-close {
-          margin-right: 13px;
           width: 100%;
           height: 100%;
           display: flex;
@@ -167,6 +158,38 @@
       @include mixins.media-sm {
         display: none;
       }
+    }
+  }
+}
+
+.dark {
+  .header {
+    background-color: colors.$dark-view-2;
+
+    &__main-navigation-list > li a {
+      color: colors.$white;
+    }
+
+    &__main-theme-button {
+      background-image: url('../images/header/theme-dark.svg');
+
+      &:hover {
+        background-image: url('../images/header/theme-dark-hover.svg');
+      }
+    }
+
+    &__main-burger-menu-list {
+      background-color: colors.$dark-view-2;
+
+      & > li {
+        a {
+          color: colors.$white;
+        }
+      }
+    }
+
+    &__main-name-company {
+      color: colors.$white;
     }
   }
 }
