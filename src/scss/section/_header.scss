@@ -71,8 +71,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 24px;
-      width: 24px;
+      height: 48px;
+      width: 48px;
       flex: 0 0 33.3%;
 
       @include mixins.media-sm {
@@ -90,11 +90,12 @@
         background-image: url('../images/header/theme-light.svg');
         background-repeat: no-repeat;
         background-size: 24px 24px;
-        transition: background-image 0.2s ease-in;
+        transition: background-color 0.2s ease-in;
         background-position: center center;
+        border-radius: 50%;
 
         &:hover {
-          background-image: url('../images/header/theme-light-hover.svg');
+          background-color: colors.$orange-background;
         }
       }
     }
@@ -181,7 +182,7 @@
         background-image: url('../images/header/theme-dark.svg');
 
         &:hover {
-          background-image: url('../images/header/theme-dark-hover.svg');
+          background-color: colors.$dark-view-1;
         }
       }
 
