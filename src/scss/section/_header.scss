@@ -90,13 +90,14 @@
         background-image: url('../images/header/theme-light.svg');
         background-repeat: no-repeat;
         background-size: 24px 24px;
-        transition: background-color 0.2s ease-in;
+        transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
         background-position: center center;
         border-radius: 50%;
 
         @include mixins.media-lg {
           &:hover {
             background-color: colors.$orange-background;
+            box-shadow: inset 0 2px 4px rgb(0 0 0 / 15%);
           }
         }
       }
@@ -186,6 +187,7 @@
         @include mixins.media-lg {
           &:hover {
             background-color: colors.$dark-view-1;
+            box-shadow: inset 0 2px 4px rgb(0 0 0 / 50%);
           }
         }
       }
