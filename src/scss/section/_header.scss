@@ -98,37 +98,39 @@
       }
     }
 
-    &-menu {
+    &-mobile-menu {
       display: flex;
       align-items: center;
-      height: 24px;
-      flex: 0 0 33.3%;
       justify-content: right;
+      height: 24px;
+      width: 24px;
+      flex: 0 0 33.3%;
 
       @include mixins.media-sm {
         display: none;
       }
 
-      &-block {
-        width: 44px;
-        height: 44px;
-        position: relative;
-        left: 8px;
+      &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        &-icon {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
+        &-button {
+          font-size: 0;
+          display: block;
+          border: 0;
+          background-color: transparent;
+          cursor: pointer;
+          width: 24px;
+          height: 24px;
+          background-image: url('../images/header/burger-menu-light.svg');
+          background-repeat: no-repeat;
+          background-size: 24px 24px;
 
-        &-close {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          &-close {
+            background-image: url('../images/header/cross-light.svg');
+            background-size: 18px 18px;
+          }
         }
       }
     }
@@ -166,30 +168,40 @@
   .header {
     background-color: colors.$dark-view-2;
 
-    &__main-navigation-list > li a {
-      color: colors.$white;
-    }
-
-    &__main-theme-button {
-      background-image: url('../images/header/theme-dark.svg');
-
-      &:hover {
-        background-image: url('../images/header/theme-dark-hover.svg');
+    &__main {
+      &-navigation-list > li a {
+        color: colors.$white;
       }
-    }
 
-    &__main-burger-menu-list {
-      background-color: colors.$dark-view-2;
+      &-theme-button {
+        background-image: url('../images/header/theme-dark.svg');
 
-      & > li {
-        a {
-          color: colors.$white;
+        &:hover {
+          background-image: url('../images/header/theme-dark-hover.svg');
         }
       }
-    }
 
-    &__main-name-company {
-      color: colors.$white;
+      &-burger-menu-list {
+        background-color: colors.$dark-view-2;
+
+        & > li {
+          a {
+            color: colors.$white;
+          }
+        }
+      }
+
+      &-name-company {
+        color: colors.$white;
+      }
+
+      &-mobile-menu-container-button {
+        background-image: url('../images/header/burger-menu-dark.svg');
+
+        &-close {
+          background-image: url('../images/header/cross-dark.svg');
+        }
+      }
     }
   }
 }

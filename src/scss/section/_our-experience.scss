@@ -153,3 +153,32 @@
     }
   }
 }
+
+.dark {
+  .our-experience {
+    background-color: colors.$dark-view-1;
+
+    &__text {
+      h3,
+      p {
+        color: colors.$white;
+      }
+
+      &-title {
+        color: colors.$white;
+      }
+    }
+
+    &__paper {
+      background-color: colors.$dark-view-2;
+
+      &-number {
+        color: colors.$orange-background;
+      }
+
+      &-name {
+        color: colors.$gray-paragraph;
+      }
+    }
+  }
+}

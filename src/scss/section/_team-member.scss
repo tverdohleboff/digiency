@@ -173,3 +173,25 @@
     }
   }
 }
+
+.dark {
+  .team-member {
+    background-color: colors.$dark-background;
+
+    &__text-block-container-title {
+      color: colors.$white;
+    }
+
+    h3 {
+      color: colors.$white;
+    }
+
+    &__profile {
+      background-color: colors.$dark-view-1;
+
+      &-name {
+        color: colors.$white;
+      }
+    }
+  }
+}

@@ -155,3 +155,19 @@
     }
   }
 }
+
+.dark {
+  .clients-feedback {
+    background-color: colors.$dark-view-1;
+
+    &__text-block {
+      h3 {
+        color: colors.$white;
+      }
+
+      &-title {
+        color: colors.$white;
+      }
+    }
+  }
+}

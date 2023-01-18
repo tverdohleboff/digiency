@@ -173,3 +173,28 @@
     }
   }
 }
+
+.dark {
+  .about-us {
+    background-color: colors.$dark-background;
+
+    &__advantage {
+      background-color: colors.$dark-view-1;
+
+      &-title {
+        color: colors.$white;
+      }
+    }
+
+    &__text-block {
+      h3,
+      p {
+        color: colors.$white;
+      }
+
+      &-title {
+        color: colors.$white;
+      }
+    }
+  }
+}

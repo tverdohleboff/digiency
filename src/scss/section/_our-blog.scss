@@ -60,6 +60,7 @@
     }
 
     &-article {
+      background-color: colors.$white;
       min-width: 296px;
       padding: 18px 18px 27px;
       box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
@@ -186,6 +187,34 @@
         @include mixins.media-sm {
           margin-top: 42.5px;
         }
+      }
+    }
+  }
+}
+
+.dark {
+  .our-blog {
+    background-color: colors.$dark-background;
+
+    &__text {
+      h3 {
+        color: colors.$white;
+      }
+
+      &-title {
+        color: colors.$white;
+      }
+    }
+
+    &__blogs-article {
+      background-color: colors.$dark-view-1;
+
+      &-synopsis-text {
+        color: colors.$white;
+      }
+
+      &-author-text-name {
+        color: colors.$white;
       }
     }
   }

@@ -1,11 +1,10 @@
 function initializeShowBurgerMenu() {
-  const forClick = document.querySelector('.header__main-menu');
+  const forClick = document.querySelector(
+    '.header__main-mobile-menu-container-button'
+  );
   forClick.addEventListener('click', refreshMenu);
   const body = document.querySelector('body');
   const mobileMenu = document.querySelector('.header__main-burger-menu');
-  const burgerIcon = document.querySelector('.header__main-menu-block-icon');
-  const burgerClose = document.querySelector('.header__main-menu-block-close');
-
   const forUrlClicks = document.querySelectorAll(
     '.header__main-burger-menu-list-url'
   );
@@ -26,11 +25,11 @@ function initializeShowBurgerMenu() {
 
   function refreshIconButton() {
     if (menuIsOpen === true) {
-      burgerIcon.classList.add('hidden');
-      burgerClose.classList.remove('hidden');
+      forClick.classList.add('header__main-mobile-menu-container-button-close');
     } else {
-      burgerClose.classList.add('hidden');
-      burgerIcon.classList.remove('hidden');
+      forClick.classList.remove(
+        'header__main-mobile-menu-container-button-close'
+      );
     }
   }
 

@@ -29,3 +29,9 @@
     }
   }
 }
+
+.dark {
+  .client-logo {
+    background-color: colors.$dark-background;
+  }
+}

@@ -209,3 +209,19 @@
     }
   }
 }
+
+.dark {
+  .our-work {
+    background-color: colors.$dark-background;
+
+    &__text {
+      &-container h3 {
+        color: colors.$white;
+      }
+
+      &-title {
+        color: colors.$white;
+      }
+    }
+  }
+}

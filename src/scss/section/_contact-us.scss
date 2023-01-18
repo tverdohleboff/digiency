@@ -46,6 +46,7 @@
     }
 
     &-communication {
+      background-color: colors.$white;
       padding: 18px 40px 30px 18px;
       box-shadow: 0 1px 10px rgba(0 0 0 / 10%);
 
@@ -303,6 +304,48 @@
 
       @include mixins.media-lg {
         height: 450px;
+      }
+    }
+  }
+}
+
+.dark {
+  .contact-us {
+    background-color: colors.$dark-background;
+
+    &__contacts {
+      &-text {
+        h3 {
+          color: colors.$white;
+        }
+
+        &-title {
+          color: colors.$white;
+        }
+      }
+
+      &-communication {
+        background-color: colors.$dark-view-1;
+
+        &-header-text h5 {
+          color: colors.$white;
+        }
+
+        &-footer-number {
+          color: colors.$white;
+        }
+      }
+    }
+
+    &__message-send {
+      &-header {
+        color: colors.$white;
+      }
+
+      &-block-input-container input,
+      & textarea {
+        background-color: colors.$dark-view-1;
+        color: colors.$white;
       }
     }
   }
