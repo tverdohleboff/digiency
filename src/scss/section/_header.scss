@@ -171,6 +171,10 @@
     &__main {
       &-navigation-list > li a {
         color: colors.$white;
+
+        &:hover {
+          color: colors.$orange;
+        }
       }
 
       &-theme-button {
