@@ -168,5 +168,19 @@
     p {
       color: colors.$white;
     }
+
+    &__social-links ul {
+      li {
+        background-color: colors.$dark-view-2;
+
+        & a svg path {
+          fill: colors.$white;
+        }
+
+        &:active {
+          background-color: colors.$orange;
+        }
+      }
+    }
   }
 }

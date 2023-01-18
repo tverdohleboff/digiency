@@ -46,22 +46,6 @@ ul[class~='svg-image'] {
   }
 }
 
-.dark {
-  ul[class~='svg-image'] {
-    li {
-      background-color: colors.$dark-view-2;
-
-      & a svg path {
-        fill: colors.$white;
-      }
-
-      &:active {
-        background-color: colors.$orange;
-      }
-    }
-  }
-}
-
 .common-container {
   width: 100%;
   margin: 0;
