@@ -85,12 +85,13 @@
         border: 0;
         background-color: transparent;
         cursor: pointer;
-        width: 24px;
-        height: 24px;
+        width: 48px;
+        height: 48px;
         background-image: url('../images/header/theme-light.svg');
         background-repeat: no-repeat;
         background-size: 24px 24px;
         transition: background-image 0.2s ease-in;
+        background-position: center center;
 
         &:hover {
           background-image: url('../images/header/theme-light-hover.svg');
@@ -111,21 +112,20 @@
       }
 
       &-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         &-button {
           font-size: 0;
           display: block;
           border: 0;
           background-color: transparent;
           cursor: pointer;
-          width: 24px;
-          height: 24px;
+          width: 48px;
+          height: 48px;
           background-image: url('../images/header/burger-menu-light.svg');
           background-repeat: no-repeat;
           background-size: 24px 24px;
+          background-position: center center;
+          position: relative;
+          right: -8px;
 
           &-close {
             background-image: url('../images/header/cross-light.svg');
