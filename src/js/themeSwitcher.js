@@ -7,9 +7,11 @@ function initializeThemeSwitcher() {
   function switchTheme() {
     if (darkThemeIsActive === false) {
       body.classList.add('dark');
+      button.setAttribute('title', 'Switch to light theme');
       darkThemeIsActive = true;
     } else {
       body.classList.remove('dark');
+      button.setAttribute('title', 'Switch to dark theme');
       darkThemeIsActive = false;
     }
   }

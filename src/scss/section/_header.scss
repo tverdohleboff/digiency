@@ -94,8 +94,10 @@
         background-position: center center;
         border-radius: 50%;
 
-        &:hover {
-          background-color: colors.$orange-background;
+        @include mixins.media-lg {
+          &:hover {
+            background-color: colors.$orange-background;
+          }
         }
       }
     }
@@ -181,8 +183,10 @@
       &-theme-button {
         background-image: url('../images/header/theme-dark.svg');
 
-        &:hover {
-          background-color: colors.$dark-view-1;
+        @include mixins.media-lg {
+          &:hover {
+            background-color: colors.$dark-view-1;
+          }
         }
       }
 
