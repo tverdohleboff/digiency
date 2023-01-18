@@ -23,7 +23,7 @@
     }
 
     @include mixins.media-lg {
-      gap: 90px;
+      gap: 50px;
     }
 
     &-company {
@@ -210,6 +210,10 @@
 
             @include mixins.media-sm {
               padding: 12px 9px 12px 5px;
+            }
+
+            @include mixins.media-lg {
+              height: 60px;
             }
 
             @extend %footer-input;
