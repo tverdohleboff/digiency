@@ -1,0 +1,70 @@
+@use 'mixins';
+@use 'colors';
+
+.carousel-container {
+  position: relative;
+  overflow-x: visible;
+  transition: left 0.2s ease-out;
+  left: 0;
+}
+
+.carousel-parent-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-outer-container {
+  position: relative;
+}
+
+.carousel-prev-button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: colors.$white;
+  opacity: 0.5;
+  border: 0;
+  transition: opacity 0.2s ease-in, left 0.2 ease-in;
+
+  @include mixins.media-sm {
+    left: -25px;
+  }
+
+  @include mixins.media-lg {
+    opacity: 0;
+    left: -50px;
+  }
+}
+
+.carousel-next-button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  background-color: colors.$white;
+  opacity: 0.5;
+  border: 0;
+  transition: opacity 0.2s ease-in, right 0.2 ease-in;
+
+  @include mixins.media-sm {
+    right: -25px;
+  }
+
+  @include mixins.media-lg {
+    opacity: 0;
+    right: -50px;
+  }
+}
+
+.carousel-outer-container:hover .carousel-prev-button,
+.carousel-outer-container:hover .carousel-next-button {
+  opacity: 0.5;
+}
