@@ -67,12 +67,12 @@
       margin: 10px;
 
       @include mixins.media-sm {
-        min-width: 332px;
-        padding: 25px;
+        min-width: 320px;
+        padding: 22px;
       }
 
       @include mixins.media-lg {
-        min-width: 570px;
+        min-width: 555px;
         padding: 18px;
       }
 

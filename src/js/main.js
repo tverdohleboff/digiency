@@ -5,7 +5,7 @@ import initializeSubscribeForm from './subscribeForm';
 import initializeScrollToTop from './scrollToTop';
 import initializeShowBurgerMenu from './showBurgerMenu';
 import initializeThemeSwitcher from './themeSwitcher';
-import initializeCarousel from './carousel';
+// import initializeCarousel from './carousel';
 
 initializeContactUsForm();
 initializeTabs();
@@ -14,3 +14,4 @@ initializeScrollToTop();
 initializeShowBurgerMenu();
 initializeThemeSwitcher();
 initializeCarousel('clients-feedback__comments-container-mentions');
+// initializeCarousel('our-blog__blogs-articles');

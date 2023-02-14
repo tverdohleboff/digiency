@@ -56,6 +56,7 @@ function initializeCarousel(containerClass) {
     const gap = parseInt(csContainer.gap);
     const csItem = getComputedStyle(item);
     const itemWidth = parseInt(csItem.width);
+    const itemMargin = parseInt(csItem.margin);
     let nextSlideIndex;
 
     if (slideDirection === 'next') {
@@ -76,7 +77,7 @@ function initializeCarousel(containerClass) {
 
     currentSlideIndex = nextSlideIndex;
 
-    const offset = gap + itemWidth;
+    const offset = gap + itemWidth + itemMargin * 2;
     let nextLeftValue;
     if (slideDirection === 'next') {
       nextLeftValue = parseInt(csContainer.left) - offset + 'px';
